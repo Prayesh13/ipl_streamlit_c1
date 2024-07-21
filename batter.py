@@ -9,6 +9,7 @@ def app():
     btn = st.sidebar.button('Show')
 
     if btn:
+        st.markdown(f"<h1 style='text-align: center; color:#54B4F3'>{ip}</h1>", unsafe_allow_html=True)
         st.subheader("Overall Batting Stats in Ipl Till 2024:")
         st.dataframe(player.batter_stats(ip), width=800,height=70)
 
