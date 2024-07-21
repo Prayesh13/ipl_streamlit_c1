@@ -13,10 +13,12 @@ def app():
     btn = st.sidebar.button('Show')
     if btn:
         st.subheader('Batter Vs Bowler')
-        st.write(ip1,'Vs',ip)
+        # st.write(ip1,'Vs',ip)
+        st.markdown(f"<h1 style='text-align: center; color:DodgerBlue'>{ip1} Vs {ip}</h1>", unsafe_allow_html=True)
         st.write(player.batterVsbowler(ip1,ip))
 
         st.subheader("Bowler's Performance in IPL till 2024")
+        st.markdown(f"<h1 style='text-align: center; color:#80E956'>{ip}</h1>", unsafe_allow_html=True)
         col1, col2 = st.columns(2)
 
         with col1:
